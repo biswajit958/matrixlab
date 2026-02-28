@@ -4,56 +4,74 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Matrix Lab | Computer Training Center at 8 Mile, Malda</title>
-<meta name="description" content="Matrix Lab Computer Training Center at 8 Mile, Malda. Courses: CCA, DCA, ADCA, Tally, Advanced Excel, Graphic Design. Admission Open.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-body{background:#f4f8ff;color:#333;}
+body{background:#f5f7ff;color:#333;line-height:1.6;}
 
 header{
-background:linear-gradient(90deg,#0a1f44,#163d7a);
+background:#0a1f44;
 color:white;
 padding:20px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-header h1{font-size:24px;}
+header h1{font-size:26px;}
 
 nav a{
 color:white;
-margin-left:20px;
+margin-left:25px;
 text-decoration:none;
 font-weight:500;
 }
 
-nav a:hover{opacity:0.8;}
+nav a:hover{color:#ffd700;}
 
 .hero{
-background:linear-gradient(135deg,#163d7a,#0a1f44);
+background:url('https://images.unsplash.com/photo-1581090700227-1e8a5b9f2c1b') no-repeat center/cover;
 color:white;
 text-align:center;
-padding:100px 20px;
+padding:140px 20px;
+position:relative;
 }
 
-.hero h2{font-size:40px;margin-bottom:20px;}
+.hero::before{
+content:"";
+position:absolute;
+top:0;left:0;right:0;bottom:0;
+background:rgba(10,31,68,0.8);
+}
+
+.hero-content{
+position:relative;
+z-index:1;
+}
+
+.hero h2{font-size:42px;margin-bottom:20px;}
 
 .btn{
 background:#ffd700;
 color:#000;
-padding:12px 30px;
+padding:14px 35px;
 border-radius:30px;
 text-decoration:none;
 font-weight:bold;
 display:inline-block;
 margin-top:20px;
+transition:0.3s;
 }
 
-section{padding:70px 20px;text-align:center;}
+.btn:hover{background:white;}
+
+section{padding:80px 20px;text-align:center;}
 
 .courses{
 display:flex;
@@ -65,23 +83,55 @@ margin-top:40px;
 
 .card{
 background:white;
-padding:25px;
-width:260px;
+padding:30px;
+width:280px;
 border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-transition:0.3s;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.4s;
 }
 
-.card:hover{transform:translateY(-8px);}
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+.card img{
+width:60px;
+margin-bottom:15px;
+}
+
+.about-section{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+justify-content:center;
+gap:40px;
+margin-top:40px;
+}
+
+.about-section img{
+width:350px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
 
 .highlight{
-background:#e6f0ff;
-padding:40px;
-border-radius:15px;
-margin-top:30px;
-max-width:800px;
-margin-left:auto;
-margin-right:auto;
+max-width:500px;
+text-align:left;
+}
+
+.gallery{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+margin-top:40px;
+}
+
+.gallery img{
+width:300px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 form{
@@ -94,28 +144,28 @@ margin-top:30px;
 }
 
 input, textarea{
-padding:12px;
+padding:14px;
 border-radius:8px;
 border:1px solid #ccc;
 }
 
 button{
-background:#163d7a;
+background:#0a1f44;
 color:white;
-padding:12px;
+padding:14px;
 border:none;
 border-radius:8px;
 cursor:pointer;
 font-weight:bold;
 }
 
-button:hover{background:#0a1f44;}
+button:hover{background:#163d7a;}
 
 footer{
 background:#0a1f44;
 color:white;
 text-align:center;
-padding:25px;
+padding:30px;
 margin-top:60px;
 }
 
@@ -125,16 +175,16 @@ bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:15px;
+padding:16px;
 border-radius:50%;
 font-size:22px;
 text-decoration:none;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
+box-shadow:0 4px 12px rgba(0,0,0,0.3);
 }
 
 @media(max-width:768px){
+.about-section{flex-direction:column;}
 .courses{flex-direction:column;align-items:center;}
-header{flex-direction:column;gap:10px;}
 }
 </style>
 </head>
@@ -146,14 +196,17 @@ header{flex-direction:column;gap:10px;}
 <nav>
 <a href="#courses">Courses</a>
 <a href="#about">About</a>
+<a href="#gallery">Gallery</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
 <section class="hero">
+<div class="hero-content">
 <h2>Upgrade Your Skills with Matrix Lab</h2>
 <p>Professional Computer Training Center at 8 Mile, Malda</p>
 <a href="#contact" class="btn">Admission Open</a>
+</div>
 </section>
 
 <section id="courses">
@@ -161,28 +214,27 @@ header{flex-direction:column;gap:10px;}
 <div class="courses">
 
 <div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/2721/2721292.png">
 <h3>CCA (6 Months)</h3>
 <p>Basic Computer, MS Office, Internet, Typing</p>
 </div>
 
 <div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/2920/2920349.png">
 <h3>DCA (6 Months)</h3>
 <p>Advanced Office, Tally, Graphic Design</p>
 </div>
 
 <div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png">
 <h3>ADCA (12 Months)</h3>
 <p>Complete Diploma with Practical Training</p>
 </div>
 
 <div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png">
 <h3>Advanced Excel</h3>
-<p>Job-Oriented Excel with Dashboard & MIS</p>
-</div>
-
-<div class="card">
-<h3>Tally & GST</h3>
-<p>Accounting & GST Return Filing Training</p>
+<p>Dashboard, MIS & Job-Oriented Training</p>
 </div>
 
 </div>
@@ -190,12 +242,26 @@ header{flex-direction:column;gap:10px;}
 
 <section id="about">
 <h2>Why Choose Matrix Lab?</h2>
+
+<div class="about-section">
+<img src="https://images.unsplash.com/photo-1581092334511-1c9f3e7b74f3">
+
 <div class="highlight">
-✔ 100% Practical Training<br>
-✔ Small Batch Size<br>
-✔ Job-Oriented Courses<br>
-✔ Affordable Fees<br>
-✔ Experienced Trainer
+<p>✔ 100% Practical Training</p>
+<p>✔ Small Batch Size</p>
+<p>✔ Job-Oriented Courses</p>
+<p>✔ Affordable Fees</p>
+<p>✔ Experienced Trainer</p>
+</div>
+</div>
+</section>
+
+<section id="gallery">
+<h2>Our Classroom Environment</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1581091870627-3d1b12f7d6c1">
+<img src="https://images.unsplash.com/photo-1581092334394-1d1e6e0d70d1">
+<img src="https://images.unsplash.com/photo-1581092334651-45c1b0b5f6ef">
 </div>
 </section>
 
@@ -203,7 +269,6 @@ header{flex-direction:column;gap:10px;}
 <h2>Contact & Admission Enquiry</h2>
 <p>📍 8 Mile (Near Gyan Bharati Vidyapith School), Dhumadighi, Malda – 732128</p>
 <p>📞 8016716978 / 8001508950</p>
-
 
 <form>
 <input type="text" placeholder="Student Name" required>
@@ -217,8 +282,7 @@ header{flex-direction:column;gap:10px;}
 <p>© 2026 Matrix Lab | All Rights Reserved</p>
 </footer>
 
-<a href="https://wa.me/918016716978" class="whatsapp">💬</a>
+<a href="https://wa.me/918016716978?text=Hello%20Matrix%20Lab,%20I%20want%20to%20take%20admission." class="whatsapp">💬</a>
 
 </body>
-
 </html>
