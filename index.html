@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Matrix Lab | Computer Training Center at 8 Mile, Malda</title>
+<meta name="description" content="Matrix Lab Computer Training Center at 8 Mile, Malda. Courses: CCA, DCA, ADCA, Tally, Advanced Excel, Graphic Design. Admission Open.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-
-body{background:#f5f7ff;color:#333;line-height:1.6;}
+body{background:#f4f7ff;color:#333;line-height:1.6;}
 
 header{
 background:#0a1f44;
@@ -25,37 +25,26 @@ z-index:1000;
 }
 
 header h1{font-size:26px;}
-
 nav a{
 color:white;
 margin-left:25px;
 text-decoration:none;
 font-weight:500;
 }
-
 nav a:hover{color:#ffd700;}
 
 .hero{
-background:url('https://images.unsplash.com/photo-1581090700227-1e8a5b9f2c1b') no-repeat center/cover;
+background:linear-gradient(rgba(10,31,68,0.8),rgba(10,31,68,0.8)),
+url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
 color:white;
 text-align:center;
 padding:140px 20px;
-position:relative;
-}
-
-.hero::before{
-content:"";
-position:absolute;
-top:0;left:0;right:0;bottom:0;
-background:rgba(10,31,68,0.8);
-}
-
-.hero-content{
-position:relative;
-z-index:1;
 }
 
 .hero h2{font-size:42px;margin-bottom:20px;}
+.hero p{font-size:18px;}
 
 .btn{
 background:#ffd700;
@@ -65,10 +54,9 @@ border-radius:30px;
 text-decoration:none;
 font-weight:bold;
 display:inline-block;
-margin-top:20px;
+margin-top:25px;
 transition:0.3s;
 }
-
 .btn:hover{background:white;}
 
 section{padding:80px 20px;text-align:center;}
@@ -95,12 +83,9 @@ transform:translateY(-10px);
 box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 
-.card img{
-width:60px;
-margin-bottom:15px;
-}
+.card h3{margin:15px 0;}
 
-.about-section{
+.about{
 display:flex;
 flex-wrap:wrap;
 align-items:center;
@@ -109,13 +94,13 @@ gap:40px;
 margin-top:40px;
 }
 
-.about-section img{
+.about img{
 width:350px;
 border-radius:15px;
 box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
-.highlight{
+.about-text{
 max-width:500px;
 text-align:left;
 }
@@ -158,7 +143,6 @@ border-radius:8px;
 cursor:pointer;
 font-weight:bold;
 }
-
 button:hover{background:#163d7a;}
 
 footer{
@@ -183,8 +167,9 @@ box-shadow:0 4px 12px rgba(0,0,0,0.3);
 }
 
 @media(max-width:768px){
-.about-section{flex-direction:column;}
+.about{flex-direction:column;}
 .courses{flex-direction:column;align-items:center;}
+header{flex-direction:column;gap:10px;}
 }
 </style>
 </head>
@@ -202,11 +187,9 @@ box-shadow:0 4px 12px rgba(0,0,0,0.3);
 </header>
 
 <section class="hero">
-<div class="hero-content">
 <h2>Upgrade Your Skills with Matrix Lab</h2>
 <p>Professional Computer Training Center at 8 Mile, Malda</p>
 <a href="#contact" class="btn">Admission Open</a>
-</div>
 </section>
 
 <section id="courses">
@@ -214,25 +197,25 @@ box-shadow:0 4px 12px rgba(0,0,0,0.3);
 <div class="courses">
 
 <div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/2721/2721292.png">
+<h2>💻</h2>
 <h3>CCA (6 Months)</h3>
 <p>Basic Computer, MS Office, Internet, Typing</p>
 </div>
 
 <div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/2920/2920349.png">
+<h2>📊</h2>
 <h3>DCA (6 Months)</h3>
 <p>Advanced Office, Tally, Graphic Design</p>
 </div>
 
 <div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png">
+<h2>🎓</h2>
 <h3>ADCA (12 Months)</h3>
 <p>Complete Diploma with Practical Training</p>
 </div>
 
 <div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png">
+<h2>📈</h2>
 <h3>Advanced Excel</h3>
 <p>Dashboard, MIS & Job-Oriented Training</p>
 </div>
@@ -243,10 +226,10 @@ box-shadow:0 4px 12px rgba(0,0,0,0.3);
 <section id="about">
 <h2>Why Choose Matrix Lab?</h2>
 
-<div class="about-section">
-<img src="https://images.unsplash.com/photo-1581092334511-1c9f3e7b74f3">
+<div class="about">
+<img src="https://images.unsplash.com/photo-1581090700227-4c4f50c9c6c2?auto=format&fit=crop&w=800&q=80">
 
-<div class="highlight">
+<div class="about-text">
 <p>✔ 100% Practical Training</p>
 <p>✔ Small Batch Size</p>
 <p>✔ Job-Oriented Courses</p>
@@ -259,9 +242,9 @@ box-shadow:0 4px 12px rgba(0,0,0,0.3);
 <section id="gallery">
 <h2>Our Classroom Environment</h2>
 <div class="gallery">
-<img src="https://images.unsplash.com/photo-1581091870627-3d1b12f7d6c1">
-<img src="https://images.unsplash.com/photo-1581092334394-1d1e6e0d70d1">
-<img src="https://images.unsplash.com/photo-1581092334651-45c1b0b5f6ef">
+<img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1581092334511-1c9f3e7b74f3?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1581092334394-1d1e6e0d70d1?auto=format&fit=crop&w=800&q=80">
 </div>
 </section>
 
